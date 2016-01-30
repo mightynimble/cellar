@@ -1,2 +1,41 @@
 <h1>Wines#index</h1>
 <p>Find me in app/views/wines/index.html.erb</p>
+<ul>
+  <% @wines.each do |w| %>
+  <li>
+    <p>
+    <div>Name</div>
+    <div><%= w.name %></div>
+    </p>
+    <p>
+    <div>Year</div>
+    <div><%= w.year %></div>
+    </p>
+    <p>
+    <div>Description</div>
+    <div><%= w.description %></div>
+    </p>
+    <p>
+    <div>Note</div>
+    <div><%= w.note %></div>
+    </p>
+    <p>
+    <div>Price</div>
+    <div><%= w.price_bought %></div>
+    </p>
+    <p>
+    <div>Bottles Stashed</div>
+    <div><%= w.bottles_stashed %></div>
+    </p>
+    <p>
+    <div>Bottles Consumed</div>
+    <div><%= w.bottles_consumed %></div>
+    </p>
+    <p>
+    <div>Purchase Date</div>
+    <div><%= w.date_bought %></div>
+    </p>
+
+  </li>
+  <% end %>
+</ul>

@@ -1,11 +1,6 @@
 Rails.application.routes.draw do
-  get 'wines/index'
 
-  get 'wines/show'
-
-  get 'wines/new'
-
-  get 'wines/create'
+  resources :wines
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

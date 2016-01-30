@@ -1,2 +1,38 @@
-<h1>Wines#new</h1>
-<p>Find me in app/views/wines/new.html.erb</p>
+<h1>New Bottle</h1>
+<%= form_for :wine, url: wines_path do |f|%>
+    <p>
+      <%= f.label :name %><br>
+      <%= f.text_field :name %>
+    </p>
+    <p>
+      <%= f.label :year %><br>
+      <%= f.date_select :year, start_year: 1990, end_year: Time.now.year, discard_month: true, discard_day: true %>
+    </p>
+    <p>
+      <%= f.label :description %><br>
+      <%= f.text_area :description %>
+    </p>
+    <p>
+      <%= f.label :note %><br>
+      <%= f.text_field :note %>
+    </p>
+    <p>
+      <%= f.label :price_bought %><br>
+      <%= f.text_field :price_bought%>
+    </p>
+    <p>
+      <%= f.label :bottles_stashed %><br>
+      <%= f.text_field :bottles_stashed %>
+    </p>
+    <p>
+      <%= f.label :bottles_consumed %><br>
+      <%= f.text_field :bottles_consumed %>
+    </p>
+    <p>
+      <%= f.label :date_bought %><br>
+      <%= f.date_select :date_bought %>
+    </p>
+    <p>
+      <%= f.submit %>
+    </p>
+<% end %>
